@@ -1,6 +1,5 @@
 package com.tableinsql.demo.controller;
 import com.tableinsql.demo.model.Staff;
-import com.tableinsql.demo.respository.StaffRespository;
 import com.tableinsql.demo.service.StaffService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -8,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/staffs")
+@RequestMapping("/api/staffs")
 public class StaffController {
     @Autowired
     private StaffService service;

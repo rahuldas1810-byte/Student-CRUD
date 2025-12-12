@@ -1,9 +1,10 @@
 package com.tableinsql.demo.respository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import com.tableinsql.demo.model.Student;
 import org.springframework.stereotype.Repository;
-import com.tableinsql.demo.model.Clazz;
+
 @Repository
-public interface ClazzRespository extends JpaRepository<Clazz,Long> {
+public interface StudentRepository extends JpaRepository<Student,Long> {
 
 }

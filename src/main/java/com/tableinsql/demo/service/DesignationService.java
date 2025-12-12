@@ -1,7 +1,7 @@
 package com.tableinsql.demo.service;
 
 import com.tableinsql.demo.model.Designation;
-import com.tableinsql.demo.respository.DesignationRespository;
+import com.tableinsql.demo.respository.DesignationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,10 +11,10 @@ import java.util.Optional;
 @Service
 public class DesignationService {
 
-    private final DesignationRespository repository;
+    private final DesignationRepository repository;
 
     @Autowired
-    public DesignationService(DesignationRespository repository) {
+    public DesignationService(DesignationRepository repository) {
         this.repository = repository;
     }
 

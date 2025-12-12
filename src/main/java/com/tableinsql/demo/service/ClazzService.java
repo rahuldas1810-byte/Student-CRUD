@@ -1,7 +1,7 @@
 package com.tableinsql.demo.service;
 
 import com.tableinsql.demo.model.Clazz;
-import com.tableinsql.demo.respository.ClazzRespository;
+import com.tableinsql.demo.respository.ClazzRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,10 +11,10 @@ import java.util.Optional;
 @Service
 public class ClazzService {
 
-    private final ClazzRespository repository;
+    private final ClazzRepository repository;
 
     @Autowired
-    public ClazzService(ClazzRespository repository) {
+    public ClazzService(ClazzRepository repository) {
         this.repository = repository;
     }
 

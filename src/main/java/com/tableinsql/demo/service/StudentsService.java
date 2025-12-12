@@ -2,8 +2,8 @@ package com.tableinsql.demo.service;
 
 import com.tableinsql.demo.model.Clazz;
 import com.tableinsql.demo.model.Student;
-import com.tableinsql.demo.respository.ClazzRespository;
-import com.tableinsql.demo.respository.StudentRespository;
+import com.tableinsql.demo.respository.ClazzRepository;
+import com.tableinsql.demo.respository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,11 +14,11 @@ import java.util.Optional;
 @Service
 public class StudentsService {
 
-    private final StudentRespository studentRepo;
-    private final ClazzRespository clazzRepo;
+    private final StudentRepository studentRepo;
+    private final ClazzRepository clazzRepo;
 
     @Autowired
-    public StudentsService(StudentRespository studentRepo, ClazzRespository clazzRepo) {
+    public StudentsService(StudentRepository studentRepo, ClazzRepository clazzRepo) {
         this.studentRepo = studentRepo;
         this.clazzRepo = clazzRepo;
     }

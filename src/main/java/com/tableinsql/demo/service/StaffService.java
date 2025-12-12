@@ -1,11 +1,10 @@
 package com.tableinsql.demo.service;
 
 import com.tableinsql.demo.model.Clazz;
-import com.tableinsql.demo.model.Designation;
 import com.tableinsql.demo.model.Staff;
-import com.tableinsql.demo.respository.ClazzRespository;
-import com.tableinsql.demo.respository.DesignationRespository;
-import com.tableinsql.demo.respository.StaffRespository;
+import com.tableinsql.demo.respository.ClazzRepository;
+import com.tableinsql.demo.respository.DesignationRepository;
+import com.tableinsql.demo.respository.StaffRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,14 +15,14 @@ import java.util.Optional;
 @Service
 public class StaffService {
 
-    private final StaffRespository staffRepo;
-    private final DesignationRespository designationRepo;
-    private final ClazzRespository clazzRepo;
+    private final StaffRepository staffRepo;
+    private final DesignationRepository designationRepo;
+    private final ClazzRepository clazzRepo;
 
     @Autowired
-    public StaffService(StaffRespository staffRepo,
-                        DesignationRespository designationRepo,
-                        ClazzRespository clazzRepo) {
+    public StaffService(StaffRepository staffRepo,
+                        DesignationRepository designationRepo,
+                        ClazzRepository clazzRepo) {
         this.staffRepo = staffRepo;
         this.designationRepo = designationRepo;
         this.clazzRepo = clazzRepo;
