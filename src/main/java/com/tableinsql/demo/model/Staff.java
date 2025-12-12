@@ -1,6 +1,7 @@
 package com.tableinsql.demo.model;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.*;
@@ -27,11 +28,13 @@ public class Staff {
 
     // Many staff -> one designation
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "designation_id")
     private Designation designation;
 
     // Many-to-many with Clazz
     @ManyToMany
+    @JsonIgnore
     @JoinTable(
             name = "staff_clazz",
             joinColumns = @JoinColumn(name = "staff_id"),
