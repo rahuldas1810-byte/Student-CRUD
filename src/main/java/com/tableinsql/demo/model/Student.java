@@ -1,6 +1,7 @@
 package com.tableinsql.demo.model;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.*;
@@ -24,6 +25,7 @@ public class Student {
     private String email;
 
     @ManyToMany
+    @JsonIgnore
     @JoinTable(
             name = "student_clazz",
             joinColumns = @JoinColumn(name = "student_id"),

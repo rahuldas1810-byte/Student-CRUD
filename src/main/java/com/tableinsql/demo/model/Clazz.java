@@ -1,6 +1,7 @@
 package com.tableinsql.demo.model;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.*;
@@ -23,8 +24,10 @@ public class Clazz {
     private int period;
 
     @ManyToMany(mappedBy = "classes")
+    @JsonIgnore
     private Set<Student> students = new HashSet<>();
 
     @ManyToMany(mappedBy = "classes")
+    @JsonIgnore
     private Set<Staff> staff = new HashSet<>();
 }
